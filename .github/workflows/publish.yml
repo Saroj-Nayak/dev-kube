@@ -12,7 +12,7 @@ jobs:
      docker build -t ghcr.io/saroj-nayak/html-server-image:latest .
   - name: Docker Login
     run: |
-    echo ${{ secrets.ACCESSSECRET }} | docker login ghcr.io -u "Saroj-Nayak" --password-stdin
+     echo ${{ secrets.ACCESSSECRET }} | docker login ghcr.io -u "Saroj-Nayak" --password-stdin
            
   - name: Push Docker Image
     run: |
