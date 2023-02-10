@@ -9,7 +9,7 @@ jobs:
            - uses: actions/checkout@v2
            - name: Build Docker Image
              run: |
-              docker build . --tag ghcr.io/saroj-nayak/html-server-image:latest
+              docker build -t ghcr.io/Saroj-Nayak/html-server-image:latest .
            - name: Docker Login
              run: |
               echo ${{ secrets.ACCESSSECRET }} | docker login ghcr.io -u "Saroj-Nayak" --password-stdin
