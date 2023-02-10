@@ -14,7 +14,7 @@ jobs:
     
   - name: Docker Login
     run: |
-    docker login ghcr.io -u $ghcr_user -p $CR_PAT
+    docker login ghcr.io -u $ghcr_user -p $secrets.ACCESSSECRET
      
   - name: Push Docker Image
     run: |
