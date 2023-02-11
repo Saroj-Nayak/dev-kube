@@ -23,7 +23,7 @@ spec:
         image: ghcr.io/saroj-nayak/dev-kube:main
         name: my-app
         ports:
-        - containerPort: 81
+        - containerPort: 80
       secrets:
       - name: my-secret
         secret:
@@ -38,7 +38,7 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 81
+    port: 80
   selector:
     app: my-app
 ---
