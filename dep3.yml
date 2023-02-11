@@ -67,3 +67,16 @@ metadata:
   name: my-secret
 type: Opaque
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: NodePort
