@@ -23,7 +23,7 @@ spec:
         image: ghcr.io/saroj-nayak/dev-kube:main
         name: my-app
         ports:
-        - containerPort: 80
+        - containerPort: 8050
       secrets:
       - name: my-secret
         secret:
@@ -66,6 +66,6 @@ spec:
     app: my-app
   ports:
     - name: http
-      port: 80
-      targetPort: 80
+      port: 8050
+      targetPort: 8050
   type: NodePort
